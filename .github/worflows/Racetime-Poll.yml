@@ -1,0 +1,17 @@
+
+
+name: Discord Race Poll
+on:
+  schedule:
+    - cron: '0 0 * * 6'  # Every Saturday at 12AM UTC (Friday 4PM PST)
+  workflow_dispatch:  # This adds a manual trigger button!
+
+jobs:
+  send-poll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord Poll
+        run: |
+          curl -X POST "${{ secrets.FIA_DISCORD_WEBHOOK }}" \
+          -H "Content-Type: application/json" \
+          -d '{"poll":{"question":{"text":"Best time to race? (PST)"},"answers":[{"poll_media":{"text":"3:00 PM PST"}},{"poll_media":{"text":"4:00 PM PST"}},{"poll_media":{"text":"5:00 PM PST"}},{"poll_media":{"text":"6:00 PM PST"}},{"poll_media":{"text":"7:00 PM PST"}},{"poll_media":{"text":"8:00 PM PST"}},{"poll_media":{"text":"Anytime"}}],"duration":24,"allow_multiselect":true}}'
