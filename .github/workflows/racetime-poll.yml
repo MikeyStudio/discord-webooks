@@ -12,4 +12,4 @@ jobs:
         run: |
           curl -X POST "${{ secrets.FIA_DISCORD_WEBHOOK }}" \
           -H "Content-Type: application/json" \
-          -d '{"poll":{"question":{"text":"Best time on Sunday to race? (PST)"},"answers":[{"poll_media":{"text":"3:00 PM PST"}},{"poll_media":{"text":"4:00 PM PST"}},{"poll_media":{"text":"5:00 PM PST"}},{"poll_media":{"text":"6:00 PM PST"}},{"poll_media":{"text":"7:00 PM PST"}},{"poll_media":{"text":"8:00 PM PST"}},{"poll_media":{"text":"Anytime"}},{"poll_media":{"text":"Not Available"}}],"duration":24,"allow_multiselect":true}}'
+          -d '{"poll":{"question":{"text":"Best time on Sunday to race? (PST)"},"answers":[{"poll_media":{"text":"3:00 PM PST"}},{"poll_media":{"text":"4:00 PM PST"}},{"poll_media":{"text":"5:00 PM PST"}},{"poll_media":{"text":"6:00 PM PST"}},{"poll_media":{"text":"7:00 PM PST"}},{"poll_media":{"text":"8:00 PM PST"}},{"poll_media":{"text":"Anytime"}},{"poll_media":{"text":"Not Available"}}],"duration":48,"allow_multiselect":true}}'
