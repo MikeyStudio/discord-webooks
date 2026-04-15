@@ -1,7 +1,7 @@
 name: Discord Race Poll
 on:
   schedule:
-    - cron: '0 23 * * 4'  # Every Saturday at 12AM UTC (Friday 4PM PST)
+    - cron: '0 23 * * 2'  # 
   workflow_dispatch:  # This adds a manual trigger button!
 
 jobs:
